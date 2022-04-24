@@ -32,5 +32,10 @@ namespace BookStore.Services.Categories
 
             _unitOfWork.Commit();
         }
+
+        public IList<GetCategoryDto> GetAll()
+        {
+            return _repository.GetAll();
+        }
     }
 }
