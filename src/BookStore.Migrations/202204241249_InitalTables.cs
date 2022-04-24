@@ -33,7 +33,7 @@ namespace BookStore.Migrations
                             .WithColumn("Author").AsString(100).NotNullable()
                             .WithColumn("CategoryId").AsInt32().NotNullable()
                             .ForeignKey("FK_Books_Categories", "Categories", "Id")
-                            .OnDelete(System.Data.Rule.SetNull);
+                            .OnDelete(System.Data.Rule.None);
         }
 
         private void CreateCategory()

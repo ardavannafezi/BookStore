@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookStore.Infrastructure.Application
 {
-    public interface Repostiory
+    public interface Repository
     {
     }
 }
