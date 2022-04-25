@@ -19,6 +19,10 @@ namespace BookStore.Persistence.EF.Books
             builder.HasKey(_ => _.Id);
             builder.Property(_ => _.Id)
                 .ValueGeneratedOnAdd();
+            builder.Property(_ => _.Title);
+            builder.Property(_ => _.Description);
+            builder.Property(_ => _.Author);
+            
         }
     }
 }

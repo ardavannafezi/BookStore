@@ -72,7 +72,8 @@ namespace BookStore.Services.Test.Unit.Categories
         {
             return new AddCategoryDto
             {
-                Title = "dummy"
+                Title = "dummy",
+               
             };
         }
 
