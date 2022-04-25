@@ -75,5 +75,21 @@ namespace BookStore.Services.Test.Unit.Categories
                 Title = "dummy"
             };
         }
+
+
+        [Fact]
+        public void Remove_removes_full_category_properly()
+        {
+
+            Category category = new Category { Title = "dummy" };
+            _dataContext.Manipulate(_ =>
+                        _.Categories.AddRange(category));
+            _sut.Delete(category);
+            _dataContext.Categories.Should()
+                .NotContain(_ => _.Id == category.Id);
+        }
+
+
+
     }
 }
