@@ -33,9 +33,21 @@ namespace BookStore.Services.Categories
             _unitOfWork.Commit();
         }
 
+        public void Delete(Category category)
+        {
+            _repository.Delete(category);
+
+            _unitOfWork.Commit();
+        }
+
         public IList<GetCategoryDto> GetAll()
         {
             return _repository.GetAll();
+        }
+
+        public Category GetCategoryById(int id)
+        {
+            return _repository.GetCategoryById(id);
         }
     }
 }

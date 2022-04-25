@@ -30,5 +30,14 @@ namespace BookStore.Persistence.EF.Categories
                     Title = _.Title
                 }).ToList();
         }
+
+        public void Delete(Category category)
+        {
+           _dataContext.Categories.Remove(category);
+        }
+        public Category GetCategoryById(int id)
+        {
+            return _dataContext.Categories.FirstOrDefault(_ => _.Id == id);
+        }
     }
 }

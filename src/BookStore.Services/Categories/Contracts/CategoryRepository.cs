@@ -12,5 +12,7 @@ namespace BookStore.Services.Categories.Contracts
     {
         void Add(Category category);
         IList<GetCategoryDto> GetAll();
+        void Delete(Category category);
+        public Category GetCategoryById(int id);
     }
 }
